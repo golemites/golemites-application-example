@@ -1,0 +1,47 @@
+buildscript{
+    repositories {
+        mavenLocal()
+    }
+}
+
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+    options.compilerArgs += '-parameters'
+}
+
+compileTestJava {
+		options.compilerArgs += '-parameters'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    api project(':application-service')
+
+    implementation 'org.slf4j:slf4j-simple:1.7.26'
+    /**
+    implementation 'org.osgi:org.osgi.service.jaxrs:1.0.0'
+    implementation 'org.apache.aries.spec:org.apache.aries.javax.jax.rs-api:1.0.0'
+    **/
+    compile 'org.tablerocket.febo:febo-core:0.1.0-SNAPSHOT'
+    compile 'org.tablerocket.febo:febo-repository:0.1.0-SNAPSHOT'
+    compile 'org.tablerocket.febo:febo-autobundle:0.1.0-SNAPSHOT'
+    compile 'org.tablerocket.febo:febo-baseline:0.1.0-SNAPSHOT'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+}

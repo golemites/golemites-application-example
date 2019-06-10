@@ -21,6 +21,10 @@ class CalcTest {
                 .require(repo.org_osgi_util_function())
                 .require(repo.org_osgi_util_promise())
                 .require(repo.org_apache_felix_scr())
+                .require(repo.org_apache_felix_configadmin())
+                .require(repo.org_apache_aries_javax_jax_rs_api())
+                .require(repo.org_ops4j_pax_logging_pax_logging_api())
+                .require(repo.org_ops4j_pax_logging_pax_logging_service())
                 .require(autoBundle.from(MyTestEntry.class))
                 .require(autoBundle.from(CalculatorBundle.class).withAutoExportApi(true))
                 .run(new String[]{});

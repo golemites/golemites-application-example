@@ -28,15 +28,12 @@ public class App {
                 .require(repo.org_apache_aries_jax_rs_whiteboard())
                 .require(repo.org_osgi_service_jaxrs())
                 .require(repo.org_apache_servicemix_specs_annotation_api_1_3())
+                 .require(repo.org_apache_felix_webconsole())
                  **/
                 .require(repo.org_apache_felix_configadmin())
                 .require(repo.org_apache_aries_javax_jax_rs_api())
-
                 .require(repo.org_ops4j_pax_logging_pax_logging_api())
                 .require(repo.org_ops4j_pax_logging_pax_logging_service())
-                //.require(repo.org_apache_felix_webconsole())
-
-
                 .require(autoBundle.from(BookingService.class))
                 .require(autoBundle.from(CalculatorBundle.class).withAutoExportApi(true));
 

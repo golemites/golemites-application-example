@@ -1,2 +1,4 @@
 rootProject.name = 'febo-application'
 enableFeaturePreview("GRADLE_METADATA")
+include "application-service"
+include "application-deployment"
