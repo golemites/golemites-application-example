@@ -21,5 +21,6 @@ repositories {
 }
 
 dependencies {
+    //api project(':application-platform')
     implementation (group: "org.tablerocket.febo", name: "febo-example-baseline", version: "0.1.0-SNAPSHOT", transitive: false)
  }
