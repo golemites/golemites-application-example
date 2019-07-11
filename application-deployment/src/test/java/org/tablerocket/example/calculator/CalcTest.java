@@ -1,30 +1,17 @@
 package org.tablerocket.example.calculator;
 
 import org.junit.jupiter.api.Test;
-import org.tablerocket.example.FeboRepository;
 import org.tablerocket.example.mytest.MyTestEntry;
 import org.tablerocket.febo.autobundle.AutoBundleSupport;
+import org.tablerocket.febo.core.OSGiFebo;
 import org.tablerocket.febo.repository.ClasspathRepositoryStore;
 
-import static org.tablerocket.febo.core.Febo.febo;
-
 class CalcTest {
-
     @Test
     void simpleTest() throws Exception {
-        FeboRepository repo = new FeboRepository(new ClasspathRepositoryStore());
-
-        // Optional concept from febo-autobundle allowing bundleization of parts of the classpath from here based on convention.
         AutoBundleSupport autoBundle = new AutoBundleSupport();
-        febo()
-                .require(repo.org_apache_felix_configadmin())
-                .require(repo.org_osgi_util_function())
-                .require(repo.org_osgi_util_promise())
-                .require(repo.org_apache_felix_scr())
-                .require(repo.org_apache_felix_configadmin())
-                .require(repo.org_apache_aries_javax_jax_rs_api())
-                .require(repo.org_ops4j_pax_logging_pax_logging_api())
-                .require(repo.org_ops4j_pax_logging_pax_logging_service())
+        OSGiFebo.febo()
+                .platform(new ClasspathRepositoryStore())
                 .require(autoBundle.from(MyTestEntry.class))
                 .require(autoBundle.from(CalculatorBundle.class).withAutoExportApi(true))
                 .run(new String[]{});

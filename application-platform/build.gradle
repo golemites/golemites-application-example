@@ -31,8 +31,7 @@ febo {
 }
 
 dependencies {
-    api (group: "org.tablerocket.febo", name: "febo-core", version: "0.1.0-SNAPSHOT", transitive: false)
-    api (group: "org.tablerocket.febo", name: "febo-repository", version: "0.1.0-SNAPSHOT", transitive: false)
+    api (group: "org.tablerocket.febo", name: "febo-api", version: "0.1.0-SNAPSHOT", transitive: false)
 
     // This is the curated list of available bundles
     repository 'org.apache.felix:org.apache.felix.configadmin:1.9.14'
