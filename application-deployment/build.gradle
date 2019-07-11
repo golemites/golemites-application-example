@@ -32,16 +32,16 @@ test {
 
 dependencies {
     api project(':application-service')
+    
+    compileOnly 'org.tablerocket.febo:febo-api:0.1.0-SNAPSHOT'
 
-    implementation 'org.slf4j:slf4j-simple:1.7.26'
-    /**
-    implementation 'org.osgi:org.osgi.service.jaxrs:1.0.0'
-    implementation 'org.apache.aries.spec:org.apache.aries.javax.jax.rs-api:1.0.0'
-    **/
-    compile 'org.tablerocket.febo:febo-core:0.1.0-SNAPSHOT'
     compile 'org.tablerocket.febo:febo-repository:0.1.0-SNAPSHOT'
     compile 'org.tablerocket.febo:febo-autobundle:0.1.0-SNAPSHOT'
-    compile 'org.tablerocket.febo:febo-example-baseline:0.1.0-SNAPSHOT'
+
+    runtimeOnly 'org.tablerocket.febo:febo-core:0.1.0-SNAPSHOT'
+    runtimeOnly 'org.slf4j:slf4j-simple:1.7.26'
+
+    testImplementation (group: "org.tablerocket.febo", name: "febo-example-baseline", version: "0.1.0-SNAPSHOT", transitive: false)
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
 }
