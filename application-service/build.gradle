@@ -21,6 +21,24 @@ repositories {
 }
 
 dependencies {
-    //api project(':application-platform')
-    implementation (group: "org.tablerocket.febo", name: "febo-example-baseline", version: "0.1.0-SNAPSHOT", transitive: false)
+    // The only true dependency at compile time
+    compileOnly (group: "org.tablerocket.febo", name: "febo-example-baseline", version: "0.1.0-SNAPSHOT", transitive: false)
+
+    implementation project(':application-calculator')
+
+    // additional utils for configuring the platform
+    testImplementation 'org.tablerocket.febo:febo-repository:0.1.0-SNAPSHOT'
+    testImplementation 'org.tablerocket.febo:febo-autobundle:0.1.0-SNAPSHOT'
+
+    // actual implementation runtime used
+    testRuntimeOnly 'org.tablerocket.febo:febo-core:0.1.0-SNAPSHOT'
+    testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.26'
+
+    testImplementation (group: "org.tablerocket.febo", name: "febo-example-baseline", version: "0.1.0-SNAPSHOT", transitive: false)
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
  }
+
+test {
+    useJUnitPlatform()
+}

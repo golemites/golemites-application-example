@@ -1,4 +1,4 @@
-package org.tablerocket.example.mytest;
+package org.tablerocket.application.example.mytest;
 
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;

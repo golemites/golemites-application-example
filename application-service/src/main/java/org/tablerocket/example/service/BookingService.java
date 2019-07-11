@@ -28,7 +28,6 @@ public class BookingService implements FeboEntrypoint
     public void paypload( String s )
     {
         System.out.println("Hello, " + s);
-
     }
 
     @Override public void execute( String[] args, InputStream in, PrintStream out, PrintStream err )
