@@ -15,6 +15,10 @@ compileJava {
     options.compilerArgs += '-parameters'
 }
 
+compileTestJava {
+    options.compilerArgs += '-parameters'
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
@@ -31,12 +35,13 @@ dependencies {
     testImplementation 'org.tablerocket.febo:febo-autobundle:0.1.0-SNAPSHOT'
 
     // actual implementation runtime used
+    testImplementation 'org.tablerocket.febo:febo-test-support:0.1.0-SNAPSHOT'
     testRuntimeOnly 'org.tablerocket.febo:febo-core:0.1.0-SNAPSHOT'
     testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.26'
 
     testImplementation (group: "org.tablerocket.febo", name: "febo-example-baseline", version: "0.1.0-SNAPSHOT", transitive: false)
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.0'
  }
 
 test {
