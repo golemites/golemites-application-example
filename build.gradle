@@ -25,4 +25,10 @@ subprojects {
     }
 }
 
+allprojects {
+    group "org.tablerocket.febo.example"
+    version "0.1.0-SNAPSHOT"
+}
+
+
 

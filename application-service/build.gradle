@@ -50,4 +50,11 @@ dependencies {
 
 apply plugin: 'org.tablerocket.febo.application.plugin'
 
+publishing {
+    publications {
+        runner(MavenPublication) {
+            artifact file("$buildDir/libs/${project.name}-runner.jar")
+        }
+    }
+}
 
