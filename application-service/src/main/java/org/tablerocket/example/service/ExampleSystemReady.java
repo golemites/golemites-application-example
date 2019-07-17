@@ -15,6 +15,6 @@ public class ExampleSystemReady implements FeboEntrypoint
 
     @Override public void execute( String[] args, InputStream in, PrintStream out, PrintStream err )
     {
-        out.println( "Hello from Felix.");
+        // out.println( "Hello from Felix.");
     }
 }
