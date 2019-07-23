@@ -1,0 +1,27 @@
+buildscript{
+    repositories {
+        mavenLocal()
+    }
+}
+
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+    options.compilerArgs += '-parameters'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    // The only true dependency at compile time
+    compileOnly (group: "org.tablerocket.febo", name: "febo-example-baseline", version: "0.1.0-SNAPSHOT", transitive: false)
+}
+

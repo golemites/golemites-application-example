@@ -2,3 +2,4 @@ rootProject.name = 'febo-application'
 enableFeaturePreview("GRADLE_METADATA")
 include "application-calculator"
 include "application-service"
+include "application-web"
