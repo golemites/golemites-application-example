@@ -36,6 +36,7 @@ dependencies {
     implementation (group: "org.tablerocket.febo", name: "febo-example-baseline", version: "0.1.0-SNAPSHOT", transitive: false)
 
     // dependency submodules. Will also automatically be installed in febo.
+    implementation project(':application-web')
     implementation project(':application-calculator')
 
     // JUnit 5 Extensions
@@ -57,4 +58,3 @@ publishing {
         }
     }
 }
-
