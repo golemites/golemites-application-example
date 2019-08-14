@@ -11,7 +11,7 @@ import org.tablerocket.febo.api.FeboEntrypoint;
 import java.io.InputStream;
 import java.io.PrintStream;
 
-@Component(immediate = true)
+//@Component(immediate = true)
 public class ExampleSystemReady implements FeboEntrypoint
 {
     @Reference Calculator calculator;
