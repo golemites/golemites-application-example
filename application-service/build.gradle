@@ -51,6 +51,11 @@ dependencies {
 
 apply plugin: 'org.tablerocket.febo.application.plugin'
 
+feboApplication {
+    repository = "401110809112.dkr.ecr.eu-central-1.amazonaws.com/camp/${project.name}:latest"
+    deployImage = true
+}
+
 publishing {
     publications {
         runner(MavenPublication) {
