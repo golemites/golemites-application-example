@@ -14,7 +14,12 @@ spec:
     spec:
       containers:
       - name: camp
-        image: 401110809112.dkr.ecr.eu-central-1.amazonaws.com/camp/application-service:latest
+        #image: 401110809112.dkr.ecr.eu-central-1.amazonaws.com/camp/application-service:latest
+        #image: registry.hub.docker.com/rebaze/camp-application-service:latest
+        #image: quay.io/rebaze/camp-dev
+        image: eu.gcr.io/golemite/application-service
         imagePullPolicy: "Always"
+        #imagePullSecrets:
+        #  - name: tonit-pull-secret
         ports:
-        - containerPort: 8080
+          - containerPort: 8080
