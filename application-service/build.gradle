@@ -52,6 +52,7 @@ dependencies {
 apply plugin: 'org.tablerocket.febo.application.plugin'
 
 feboApplication {
+    pushTo = org.tablerocket.febo.api.PushTarget.REGISTRY
     repository = "eu.gcr.io/golemite/${project.name}:latest"
     deployImage = true
 }

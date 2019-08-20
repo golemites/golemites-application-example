@@ -20,6 +20,6 @@ spec:
         image: eu.gcr.io/golemite/application-service
         imagePullPolicy: "Always"
         #imagePullSecrets:
-        #  - name: tonit-pull-secret
+        #        #  - name: tonit-pull-secret
         ports:
           - containerPort: 8080
