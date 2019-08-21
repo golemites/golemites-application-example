@@ -1,16 +1,16 @@
 package org.tablerocket.application.example.calculator;
 
+import org.golemites.api.FeboEntrypoint;
+import org.golemites.testsupport.GolemitesExtension;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.tablerocket.example.calculator.api.Calculator;
 import org.tablerocket.example.calculator.extra.Operator;
-import org.tablerocket.febo.api.FeboEntrypoint;
-import org.tablerocket.febo.testsupport.FeboExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@ExtendWith(FeboExtension.class)
+@ExtendWith(GolemitesExtension.class)
 class CalcTest {
 
     @Test

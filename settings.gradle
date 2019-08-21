@@ -1,5 +1,5 @@
-rootProject.name = 'febo-application'
-enableFeaturePreview("GRADLE_METADATA")
+rootProject.name = 'golemites-demo-application'
 include "application-calculator"
 include "application-service"
 include "application-web"
+enableFeaturePreview("GRADLE_METADATA")

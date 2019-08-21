@@ -1,6 +1,6 @@
-# Febo Demo Application
+# Golemites Demo Application
 
-This is a demo application for FEBO.
+This is a demo application for Golemites.
 
-For more info, head over to https://github.com/greendevio/febo
+For more info, head over to https://github.com/greendevio/golemites
 

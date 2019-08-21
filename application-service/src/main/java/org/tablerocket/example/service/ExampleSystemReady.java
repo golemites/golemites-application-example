@@ -1,12 +1,12 @@
 package org.tablerocket.example.service;
 
+import org.golemites.api.FeboEntrypoint;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tablerocket.example.calculator.api.Calculator;
 import org.tablerocket.example.calculator.extra.Operator;
-import org.tablerocket.febo.api.FeboEntrypoint;
 
 import java.io.InputStream;
 import java.io.PrintStream;

@@ -3,7 +3,7 @@ buildscript{
         mavenLocal()
     }
     dependencies{
-        classpath 'org.tablerocket.febo:febo-gradle-plugin:0.1.0-SNAPSHOT'
+        classpath 'org.golemites:golemites-gradle-plugin:0.1.0-SNAPSHOT'
     }
 }
 
@@ -31,7 +31,7 @@ febo {
 }
 
 dependencies {
-    api (group: "org.tablerocket.febo", name: "febo-api", version: "0.1.0-SNAPSHOT", transitive: false)
+    api (group: "org.golemites", name: "golemites-api", version: "0.1.0-SNAPSHOT", transitive: false)
 
     // This is the curated list of available bundles
     repository 'org.apache.felix:org.apache.felix.configadmin:1.9.14'
@@ -57,14 +57,14 @@ dependencies {
     baseline (group: "org.osgi", name: "osgi.cmpn", version: '7.0.0', transitive: false)
     baseline (group: "org.apache.aries.spec", name: "org.apache.aries.javax.jax.rs-api", version: "1.0.0", transitive: false)
 
-    baseline (group: "org.tablerocket.febo", name: "febo-core", version: "0.1.0-SNAPSHOT", transitive: false)
-    baseline (group: "org.tablerocket.febo", name: "febo-autobundle", version: "0.1.0-SNAPSHOT", transitive: false)
+    baseline (group: "org.golemites", name: "golemites-core", version: "0.1.0-SNAPSHOT", transitive: false)
+    baseline (group: "org.golemites", name: "golemites-autobundle", version: "0.1.0-SNAPSHOT", transitive: false)
 }
 
 publishing {
     publications {
         prebuilt(MavenPublication) {
-            artifact file("$buildDir/libs/febo-example-baseline-${version}.jar")
+            artifact file("$buildDir/libs/${project.name}-${version}.jar")
         }
     }
 }

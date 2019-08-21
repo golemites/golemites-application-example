@@ -6,4 +6,4 @@
 ##
 ##############################################################################
 
-./gradlew -b ../febo/build.gradle publishToMavenLocal --P baseline=true && ./gradlew test application-service:generateFeboJar --i --stacktrace
+./gradlew -b ../golemites/build.gradle publishToMavenLocal --P baseline=true && ./gradlew test application-service:generateFeboJar --i --stacktrace
