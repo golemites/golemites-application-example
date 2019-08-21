@@ -1,12 +1,12 @@
-package org.tablerocket.application.example.calculator;
+package org.golemites.application.example.calculator;
 
 import org.golemites.api.FeboEntrypoint;
+import org.golemites.example.calculator.api.Calculator;
+import org.golemites.example.calculator.extra.Operator;
 import org.golemites.testsupport.GolemitesExtension;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.tablerocket.example.calculator.api.Calculator;
-import org.tablerocket.example.calculator.extra.Operator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

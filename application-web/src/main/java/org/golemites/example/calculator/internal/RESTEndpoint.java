@@ -1,4 +1,4 @@
-package org.tablerocket.example.calculator.internal;
+package org.golemites.example.calculator.internal;
 
 
 import org.osgi.service.component.annotations.Component;
