@@ -33,7 +33,7 @@ test {
 
 dependencies {
     // The only true dependency at compile time
-    implementation (group: "org.golemites", name: "golemites-example-baseline", version: "0.1.0-SNAPSHOT", transitive: false)
+    implementation (group: "org.golemites.gestalt.repository", name: "gestalt-webapp-simple", version: "0.1.0-SNAPSHOT", transitive: false)
 
     // dependency submodules. Will also automatically be installed in golemites.
     implementation project(':application-web')

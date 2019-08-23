@@ -1,4 +1,4 @@
-rootProject.name = 'golemites-demo-application'
+rootProject.name = 'golemites-application-example'
 include "application-calculator"
 include "application-service"
 include "application-web"
