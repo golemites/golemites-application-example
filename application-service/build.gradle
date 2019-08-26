@@ -51,17 +51,16 @@ dependencies {
 
 apply plugin: 'org.golemites.application.plugin'
 
-feboApplication {
+golemites {
     pushTo = org.golemites.api.PushTarget.REGISTRY
     repository = "eu.gcr.io/golemite/${project.name}"
-    deployImage = true
     name = project.name
 }
-
-publishing {
-    publications {
-        runner(MavenPublication) {
-            artifact file("$buildDir/libs/${project.name}-runner.jar")
-        }
-    }
-}
+//
+//publishing {
+//    publications {
+//        runner(MavenPublication) {
+//            artifact file("$buildDir/libs/${project.name}-runner.jar")
+//        }
+//    }
+//}
