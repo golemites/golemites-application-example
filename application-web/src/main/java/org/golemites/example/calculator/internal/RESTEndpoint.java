@@ -1,6 +1,4 @@
 package org.golemites.example.calculator.internal;
-
-
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
 
@@ -27,6 +25,6 @@ public class RESTEndpoint {
     @Path("/foo")
     @Produces( MediaType.APPLICATION_JSON )
     public String sayHello() {
-        return "{\"message\" : \"Toni\"}";
+        return "{\"message\" : \"Toni4\"}";
     }
 }

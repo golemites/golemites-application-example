@@ -1,4 +1,15 @@
 dependencies {
     implementation (group: "org.golemites.gestalt.repository", name: "gestalt-webapp-simple", version: "0.1.0-SNAPSHOT", transitive: false)
+    // JUnit 5 Extensions
+    testImplementation 'org.golemites:golemites-test-support:0.1.0-SNAPSHOT'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.1'
+    testRuntimeOnly 'org.apache.logging.log4j:log4j-core:2.11.1'
+    testRuntimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.1'
+    testCompile 'io.rest-assured:rest-assured:4.0.0'
 }
 
+test {
+    useJUnitPlatform()
+}
